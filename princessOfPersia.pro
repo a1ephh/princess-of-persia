@@ -10,11 +10,13 @@ CONFIG += c++17
 
 SOURCES += \
     characters.cpp \
+    enemy.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     characters.h \
+    enemy.h \
     mainwindow.h
 
 FORMS += \
