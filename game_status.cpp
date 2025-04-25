@@ -1,8 +1,7 @@
 #include "game_status.h"
 #include <QDebug>
 
-game_status::game_status(QObject *parent)
-    : QObject(parent), currentLevel(1) {}
+game_status::game_status(QObject *parent) : QObject(parent), currentLevel(1) {}
 
 void game_status::startGame() {
     currentLevel = 1;

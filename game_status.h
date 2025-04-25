@@ -21,4 +21,4 @@ signals:
     void levelChanged(int newLevel);
 };
 
-#endif // GAME_STATUS_H
+#endif
