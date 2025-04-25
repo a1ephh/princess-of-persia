@@ -17,7 +17,14 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void updateLevelLabel(int level);
+
+    void on_startButton_clicked();
+    void on_nextLevelButton_clicked();
+
 private:
     Ui::MainWindow *ui;
+    game_status *gameStatus;
 };
 #endif // MAINWINDOW_H
