@@ -3,7 +3,6 @@
 
 #include <vector>
 #include <string>
-#include <iostream>
 #include "weapons.h"
 
 using namespace std;
@@ -14,15 +13,17 @@ private:
     vector<Weapons> weaponsAvailable;
     vector<Weapons> weaponsPurchased;
 
+    void initializeWeapons();
+
 public:
     Shop(int initialCoins = 0);
 
-    void addWeaponToShop(const Weapons& weapon);
-    void displayWeaponsAvailable() const;
+    vector<Weapons> getAvailableWeapons() const;
+    vector<Weapons> getPurchasedWeapons() const;
+    int getCoinCount() const;
+
     bool purchaseWeapon(int index);
     void earnCoins(int coins);
-    int getCoinCount() const;
-    vector<Weapons> getPurchasedWeapons() const;
 };
 
 #endif // SHOP_H

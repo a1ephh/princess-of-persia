@@ -1,8 +1,6 @@
 #include "weapons.h"
-using namespace std;
 
-Weapons::Weapons(string name, double damage)
-    : weaponName(name), weaponDamage(damage) {}
+Weapons::Weapons(string name, double damage) : weaponName(name), weaponDamage(damage) {}
 
 string Weapons::getWeaponName() const {
     return weaponName;
@@ -19,3 +17,4 @@ void Weapons::setWeaponName(const string& name) {
 void Weapons::setWeaponDamage(double damage) {
     weaponDamage = damage;
 }
+

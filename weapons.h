@@ -2,6 +2,7 @@
 #define WEAPONS_H
 
 #include <string>
+
 using namespace std;
 
 class Weapons {
