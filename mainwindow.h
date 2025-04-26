@@ -1,5 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
+#include "game_status.h"
 
 #include <QMainWindow>
 
@@ -21,10 +22,10 @@ private slots:
     void updateLevelLabel(int level);
 
     void on_startButton_clicked();
-    void on_nextLevelButton_clicked();
+
 
 private:
     Ui::MainWindow *ui;
     game_status *gameStatus;
 };
-#endif // MAINWINDOW_H
+#endif

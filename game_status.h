@@ -16,6 +16,7 @@ public:
     void restartLevel();
     int getCurrentLevel() const;
     void nextLevel();
+    void levelCompleted();
 
 signals:
     void levelChanged(int newLevel);

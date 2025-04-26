@@ -19,6 +19,7 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::updateLevelLabel(int level) {
+    qDebug() << "Label update called with level:" << level;
     ui->levelLabel->setText("Level: " + QString::number(level));
 }
 
@@ -26,6 +27,16 @@ void MainWindow::on_startButton_clicked() {
     gameStatus->startGame();
 }
 
-void MainWindow::on_nextLevelButton_clicked() {
-    gameStatus->nextLevel();
+void MainWindow::on_restartButton_clicked() {
+    gameStatus->restartLevel();
 }
+
+
+// void MainWindow:: {
+
+//     if (character->isAlive) {
+//         gameStatus->levelCompleted();
+//
+// }
+// will be implemented when we work on level two
+

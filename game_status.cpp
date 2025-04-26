@@ -18,8 +18,14 @@ int game_status::getCurrentLevel() const {
     return currentLevel;
 }
 
-void game_status::nextLevel() {
+// void game_status::nextLevel() {
+
+//     emit levelChanged(currentLevel);
+// }
+//. will be implemented when we do the next levels
+
+void game_status::levelCompleted() {
     currentLevel++;
     emit levelChanged(currentLevel);
-    qDebug() << "Proceeding to Level" << currentLevel;
+    qDebug() << "Player completed level. Now at level:" << currentLevel;
 }
