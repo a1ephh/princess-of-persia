@@ -10,11 +10,4 @@ double Weapons::getWeaponDamage() const {
     return weaponDamage;
 }
 
-void Weapons::setWeaponName(const string& name) {
-    weaponName = name;
-}
-
-void Weapons::setWeaponDamage(double damage) {
-    weaponDamage = damage;
-}
 

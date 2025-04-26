@@ -16,8 +16,6 @@ public:
     string getWeaponName() const;
     double getWeaponDamage() const;
 
-    void setWeaponName(const string& name);
-    void setWeaponDamage(double damage);
 };
 
 #endif // WEAPONS_H
