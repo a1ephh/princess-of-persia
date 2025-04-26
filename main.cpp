@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "shopwindow.h"
 
 #include <QApplication>
 
@@ -8,7 +9,7 @@ int main(int argc, char *argv[])
     // hellooooo
     //janna was here
     QApplication a(argc, argv);
-    MainWindow w;
+    ShopWindow w;
     w.show();
     return a.exec();
     //jana
