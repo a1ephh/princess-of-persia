@@ -33,6 +33,7 @@ bool Shop::purchaseWeapon(int index) {
         return false;
     Weapons selected = weaponsAvailable[index];
     weaponsPurchased.push_back(selected);
+    weaponsAvailable.erase(weaponsAvailable.begin() + index);
     coinCounter--;
     return true;
 }

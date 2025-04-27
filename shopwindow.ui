@@ -19,7 +19,7 @@
   <widget class="QLabel" name="labelCoins">
    <property name="geometry">
     <rect>
-     <x>940</x>
+     <x>880</x>
      <y>10</y>
      <width>221</width>
      <height>91</height>
@@ -34,8 +34,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">color: black;
-font-size: 18px;
-font-weight: bold;</string>
+font-size: 35px; font-weight: bold;</string>
    </property>
    <property name="text">
     <string>TextLabel</string>

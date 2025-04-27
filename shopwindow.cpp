@@ -33,9 +33,23 @@ void ShopWindow::updateWeaponTable() {
 
     ui->tableWeapons->setRowCount(static_cast<int>(available.size()));
 
+    ui->tableWeapons->setColumnCount(2);
+    ui->tableWeapons->setHorizontalHeaderLabels(QStringList() << "Weapon Name" << "Damage");
+
+    QFont font;
+    font.setPointSize(40);
+
+
     for (int i = 0; i < static_cast<int>(available.size()); ++i) {
         QTableWidgetItem *nameItem = new QTableWidgetItem(QString::fromStdString(available[i].getWeaponName()));
         QTableWidgetItem *damageItem = new QTableWidgetItem(QString::number(available[i].getWeaponDamage()));
+
+        nameItem->setTextAlignment(Qt::AlignCenter);
+        damageItem->setTextAlignment(Qt::AlignCenter);
+
+        nameItem->setFont(font);
+        damageItem->setFont(font);
+        ui->tableWeapons->setRowHeight(i, 50);
 
         ui->tableWeapons->setItem(i, 0, nameItem);
         ui->tableWeapons->setItem(i, 1, damageItem);
@@ -43,6 +57,7 @@ void ShopWindow::updateWeaponTable() {
 }
 
     ui->tableWeapons->resizeColumnsToContents();
+    ui->tableWeapons->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 
 }
 
@@ -63,9 +78,11 @@ void ShopWindow::on_buttonBuyWeapon_clicked()
     bool success = shop.purchaseWeapon(selectedRow);
     if (success) {
         QMessageBox::information(this, "Purchase Successful", "You have bought the weapon!");
+        updateWeaponTable();
+        updateCoinDisplay();
     } else {
         QMessageBox::critical(this, "Purchase Failed", "You don't have enough coins to buy!");
     }
 
-    updateCoinDisplay();
+
 }
