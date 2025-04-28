@@ -8,6 +8,10 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
+    // Create MainWindow
+    MainWindow w;
+    w.show();
+
     // Set up scene and view
     QGraphicsScene* scene = new QGraphicsScene();
     QGraphicsView* view = new QGraphicsView(scene);
@@ -24,17 +28,9 @@ int main(int argc, char *argv[])
 
     // Create an obstacle
     Obst* bladeObstacle = new Obst(":/sprites/blade1.png");
-
-    // Set its type
     bladeObstacle->setType(Obst::Blade);
-
-    // Enable animation (will cycle through frames)
     bladeObstacle->enableAnimation(true);
-
-    // Set position in the scene
-    bladeObstacle->setPos(300, 150); // x=300, y=150
-
-    // Add to the scene
+    bladeObstacle->setPos(300, 150);
     scene->addItem(bladeObstacle);
 
     Obst* spikeObstacle = new Obst(":/sprites/spike.png");
@@ -42,10 +38,5 @@ int main(int argc, char *argv[])
     spikeObstacle->setPos(500, 400);
     scene->addItem(spikeObstacle);
 
-
-
     return a.exec();
-    //jana
 }
-
-

@@ -20,6 +20,7 @@ HEADERS += \
     obst.h
 
 FORMS += \
+    game_status.ui \
     mainwindow.ui
 
 # Default rules for deployment.
@@ -29,4 +30,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     resources.qrc \
-    resources.qrc
+

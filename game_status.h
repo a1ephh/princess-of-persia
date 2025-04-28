@@ -1,25 +1,36 @@
 #ifndef GAME_STATUS_H
 #define GAME_STATUS_H
 
-#include <QObject>
+#include <QWidget>
 
-class game_status : public QObject {
+class QLabel;
+class QPushButton;
+class QVBoxLayout;
+
+class game_status : public QWidget
+{
     Q_OBJECT
 
-private:
-    int currentLevel;
-
 public:
-    explicit game_status(QObject *parent = nullptr);
+    explicit game_status(QWidget *parent = nullptr);
+    ~game_status() override = default;
 
     void startGame();
     void restartLevel();
-    int getCurrentLevel() const;
-    void nextLevel();
+    int  getCurrentLevel() const;
     void levelCompleted();
 
 signals:
     void levelChanged(int newLevel);
+
+private slots:
+    void updateLevelLabel(int level);
+    void on_startButton_clicked();
+
+private:
+    int            currentLevel{1};
+    QLabel        *levelLabel;
+    QPushButton   *startButton;
 };
 
-#endif
+#endif // GAME_STATUS_H

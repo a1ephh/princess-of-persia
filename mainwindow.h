@@ -1,13 +1,12 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-#include "game_status.h"
 
 #include <QMainWindow>
 
+class game_status;
+
 QT_BEGIN_NAMESPACE
-namespace Ui {
-class MainWindow;
-}
+namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
@@ -15,17 +14,11 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
-
-private slots:
-    void updateLevelLabel(int level);
-
-    void on_startButton_clicked();
-
+    explicit MainWindow(QWidget *parent = nullptr);
+    ~MainWindow() override = default;
 
 private:
-    Ui::MainWindow *ui;
-    game_status *gameStatus;
+    game_status *statusWidget;
 };
-#endif
+
+#endif // MAINWINDOW_H
