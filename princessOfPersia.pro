@@ -11,11 +11,17 @@ CONFIG += c++17
 SOURCES += \
     game_status.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    obst.cpp
 
 HEADERS += \
+<<<<<<< HEAD
     game_status.h \
     mainwindow.h
+=======
+    mainwindow.h \
+    obst.h
+>>>>>>> b0d8c09a86134d8cd53eee161ac11814162e13be
 
 FORMS += \
     mainwindow.ui
@@ -24,3 +30,7 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resources.qrc \
+    resources.qrc
