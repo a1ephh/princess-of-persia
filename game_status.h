@@ -33,4 +33,4 @@ private:
     QPushButton   *startButton;
 };
 
-#endif // GAME_STATUS_H
+#endif

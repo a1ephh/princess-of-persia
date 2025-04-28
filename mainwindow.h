@@ -21,4 +21,4 @@ private:
     game_status *statusWidget;
 };
 
-#endif // MAINWINDOW_H
+#endif

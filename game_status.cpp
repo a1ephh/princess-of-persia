@@ -9,16 +9,16 @@ game_status::game_status(QWidget *parent)
     , levelLabel(new QLabel(this))
     , startButton(new QPushButton("Start Game", this))
 {
-    // Layout
+
     auto *layout = new QVBoxLayout(this);
     layout->addWidget(levelLabel,    0, Qt::AlignCenter);
     layout->addWidget(startButton,   0, Qt::AlignCenter);
     setLayout(layout);
 
-    // Initial label
+
     levelLabel->setText(QStringLiteral("Level: %1").arg(currentLevel));
 
-    // Connections
+
     connect(this, &game_status::levelChanged, this, &game_status::updateLevelLabel);
     connect(startButton, &QPushButton::clicked, this, &game_status::on_startButton_clicked);
 }
