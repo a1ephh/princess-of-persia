@@ -15,13 +15,9 @@ SOURCES += \
     obst.cpp
 
 HEADERS += \
-<<<<<<< HEAD
     game_status.h \
-    mainwindow.h
-=======
     mainwindow.h \
     obst.h
->>>>>>> b0d8c09a86134d8cd53eee161ac11814162e13be
 
 FORMS += \
     mainwindow.ui
