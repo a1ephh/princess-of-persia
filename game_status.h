@@ -5,7 +5,7 @@
 
 class QLabel;
 class QPushButton;
-class QVBoxLayout;
+class QStackedLayout;
 
 class game_status : public QWidget
 {
@@ -26,11 +26,19 @@ signals:
 private slots:
     void updateLevelLabel(int level);
     void on_startButton_clicked();
+    void on_playButton_clicked();
 
 private:
-    int            currentLevel{1};
-    QLabel        *levelLabel;
-    QPushButton   *startButton;
+    // internal state
+    int               currentLevel{1};
+
+    // UI elements
+    QStackedLayout   *stackLayout;
+    QWidget          *startPage;
+    QPushButton      *playButton;
+    QWidget          *gamePage;
+    QLabel           *levelLabel;
+    QPushButton      *restartButton;
 };
 
-#endif
+#endif // GAME_STATUS_H

@@ -6,4 +6,5 @@ MainWindow::MainWindow(QWidget *parent)
     , statusWidget(new game_status(this))
 {
     setCentralWidget(statusWidget);
+
 }

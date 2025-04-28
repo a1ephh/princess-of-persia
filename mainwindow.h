@@ -5,10 +5,6 @@
 
 class game_status;
 
-QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
-QT_END_NAMESPACE
-
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -21,4 +17,4 @@ private:
     game_status *statusWidget;
 };
 
-#endif
+#endif // MAINWINDOW_H
