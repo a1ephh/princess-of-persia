@@ -14,7 +14,6 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-<<<<<<< HEAD
    <widget class="QLabel" name="levelLabel">
     <property name="geometry">
      <rect>
@@ -31,7 +30,7 @@
    <widget class="QPushButton" name="startButton">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>320</x>
       <y>310</y>
       <width>100</width>
       <height>61</height>
@@ -40,33 +39,6 @@
     <property name="text">
      <string>Start Game</string>
     </property>
-=======
-   <widget class="QFrame" name="frame">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>40</y>
-      <width>431</width>
-      <height>361</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Shape::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Shadow::Raised</enum>
-    </property>
-    <widget class="QGraphicsView" name="graphicsView">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>80</y>
-       <width>256</width>
-       <height>192</height>
-      </rect>
-     </property>
-    </widget>
->>>>>>> b0d8c09a86134d8cd53eee161ac11814162e13be
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -75,11 +47,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-<<<<<<< HEAD
      <height>36</height>
-=======
-     <height>37</height>
->>>>>>> b0d8c09a86134d8cd53eee161ac11814162e13be
     </rect>
    </property>
   </widget>

@@ -27,9 +27,9 @@ void MainWindow::on_startButton_clicked() {
     gameStatus->startGame();
 }
 
-void MainWindow::on_restartButton_clicked() {
-    gameStatus->restartLevel();
-}
+// void MainWindow::on_restartButton_clicked() {
+//     gameStatus->restartLevel();
+// }
 
 
 // void MainWindow:: {
