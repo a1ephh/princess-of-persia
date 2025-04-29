@@ -9,15 +9,18 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    game_status.cpp \
     main.cpp \
     mainwindow.cpp \
     obst.cpp
 
 HEADERS += \
+    game_status.h \
     mainwindow.h \
     obst.h
 
 FORMS += \
+    game_status.ui \
     mainwindow.ui
 
 # Default rules for deployment.
@@ -27,4 +30,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     resources.qrc \
-    resources.qrc
+

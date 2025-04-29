@@ -1,14 +1,10 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include "game_status.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    , statusWidget(new game_status(this))
 {
-    ui->setupUi(this);
-}
+    setCentralWidget(statusWidget);
 
-MainWindow::~MainWindow()
-{
-    delete ui;
 }
